@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // подключаем плагин load-grunt-tasks, чтобы не перечислять все прочие плагины
   require('load-grunt-tasks')(grunt);
 
-  // описываем задачи, которые планируем использовать (их запуск - см. низ этого файла)
+  // описываем задачи, которые планируем использовать
   grunt.initConfig({
 
     // очищаем папку build перед новой записью
@@ -11,20 +11,6 @@ module.exports = function(grunt) {
       build: ['build']
     },
 	
-	// компилируем scss
-    sass: {
-      source: {
-        files: [{
-          expand: true,
-          cwd: 'source/css',
-          src: ['*.scss'],
-          dest: 'source/css',
-          ext: '.css'
-        }]
-      }
-    },
-	
-
 	// копируем файлы из папки source в папку build и дальше работаем с этой папкой
     copy: {
       build: {
@@ -68,8 +54,6 @@ module.exports = function(grunt) {
 		src: "build/css/style.css"
       }
 	},
-
-    
 
     // Сжимаем css
     cssmin: {
@@ -116,10 +100,6 @@ module.exports = function(grunt) {
             {
               match: /\"css\/style.css/g, 
               replacement: '"css/style.min.css'
-            },
-            {
-              match: /\"css\/normalize.css/g, 
-              replacement: '"css/normalize.min.css'
             }
           ]
         },
@@ -130,36 +110,19 @@ module.exports = function(grunt) {
 		  }
         ]
       }
-    },
-	
-	//Отслеживаем изменения
-    watch: {
-	  livereload: {
-        options: { livereload: true },
-        files: ['source/**/*'],
-      },
-	  
-      sass: {
-        files: ['css/*.scss'],
-        tasks: ['sass']
-      }
     }
 
   });
 
-
-
   // задача по умолчанию
   grunt.registerTask('default', [
-  	'sass',
     'clean',
     'copy',
     'includereplace:html',
     'autoprefixer',
     'cssmin',
     'imagemin',
-    'replace',
-	'watch'
+    'replace'
   ]);
 
 };
