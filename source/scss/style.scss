@@ -33,7 +33,6 @@ header {
   top: 40px;
   left: 30px;
   color: #fff;
-  z-index: 20;
   
   .fa-map-marker {
     font-size: 40px;
@@ -54,7 +53,7 @@ header {
   left: 70px;
   width: 175px;
   padding: 0;
-  background: gray;
+  background: url('../img/footer-bg.jpg') center repeat-y;
   list-style: none;
   text-align: left;
   z-index: 30;
@@ -95,6 +94,12 @@ header {
 .bars:focus{
   color: #fff;
 }
+.callback {
+  position: absolute;
+  top: 10px;
+  right: 300px;
+  color: #fff;
+}
 /* HEADER end */
 
 /* MENU */
@@ -104,14 +109,14 @@ header {
   right: -300px;
   height: 100%;
   width: 300px;
-  background: gray;
+  background: url('../img/footer-bg.jpg') center repeat-y;
   z-index: 10;
   padding-top: 146px;
   ul {
     list-style: none;
   }
   li {
-    height: 60px;
+    height: 40px;
   }
   a {
     display: block;
@@ -122,6 +127,9 @@ header {
   a:hover {
     color: lightblue;
     text-decoration: none;
+  }
+  .callback-menu {
+    margin-top: 30px;
   }
 }
 
@@ -145,16 +153,32 @@ header {
 }
 /* slider end */
 
+.calendar {
+  width: 200px;
+}
+.sort {
+  width: 200px;
+  float: right;
+  background: #f0ad4e;
+  border-color: #f0ad4e;
+  color: #fff;
+}
+
+/* gallery */
 .gallery {
-  margin-top: 50px;
+  margin-top: 70px;
   margin-bottom: 50px;
 }
 .gallery-item {
   margin-bottom: 25px;
+  .zoom {
+    transition: all 0.5s ease-out;
+  }
 }
 .gallery-img-container {
-    position: relative;
-  }
+  position: relative;
+  overflow: hidden;
+}
 .img-hover {
     display: none;
     position: absolute;
@@ -165,13 +189,36 @@ header {
     background-color: rgba(28,104,189, 0.6);
 }
 .gallery-item:hover {
-  
-  
+  .zoom {
+    transform:scale(1.1);
+  }
   .img-hover {
     display: block;
   }
-
 }
+.game-logo {
+  position: absolute;
+  height: 25%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.game-title {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  p {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(193, 193, 193, 0.3);
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+/* gallery end*/
 
 .info {
   margin-bottom: 50px;
@@ -223,49 +270,106 @@ footer {
 
 
 
-@media only screen and (max-width : 992px) {
+/* ROOM */
+.schedule {
+  margin-top: 50px;
+}
+td,
+th{
+  text-align: center;
+}
+td:hover {
+  text-decoration: underline;
+}
+th:hover {
+  cursor: default;
+}
+.t-active {
+  background-color: #ababab;
+}
+.t-active:hover,
+.t-time:hover {
+  text-decoration: none;
+  cursor: default;
+}
+.t-success {
+  background-color: #5cb85c;
+  cursor: pointer;
+}
+.t-info {
+  background-color: #5bc0de;
+  cursor: pointer;
+}
+.t-warning {
+  background-color: #f0ad4e;
+  cursor: pointer;
+}
+.t-danger {
+  background-color: #d9534f;
+  cursor: pointer;
+}
+.t-primary {
+  background-color: #337ab7;
+  cursor: pointer;
+}
+.results {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.show-results {
+  margin-top: 30px;
+}
+.game-info {
+  position: relative;
+}
+//.genesis {
+//  background: url('../img/genesis-img.jpg') center top no-repeat;
+//}
+/* ROOM end*/
 
+
+
+@media only screen and (max-width : 1200px) {
+  .callback {
+    right: 200px;
+  }
+}
+
+
+@media only screen and (max-width : 992px) {
+  
   footer {
     text-align: center;
     .copy p {
       text-align: center;
     }
   }
-  
 }
 
 
-/* ROOM */
-td,
-th{
-  text-align: center;
-}
-.t-active {
-  background-color: #ababab;
-}
-.t-success {
-  background-color: #5cb85c;
-}
-.t-info {
-  background-color: #5bc0de;
-}
-.t-warning {
-  background-color: #f0ad4e;
-}
-.t-danger {
-  background-color: #d9534f;
-}
-.t-primary {
-  background-color: #337ab7;
+@media only screen and (max-width : 768px) {
+
 }
 
 
+@media only screen and (max-width : 480px) {
+  .calendar {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .sort {
+    float: none;
+    display: block;
+    width: 100%;
+  }
+}
 
 
+@media only screen and (max-width : 320px) {
 
-
-
-
+}
 
 
 
