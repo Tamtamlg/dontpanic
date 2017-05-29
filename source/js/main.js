@@ -36,7 +36,7 @@ $(function () {
   location.click(function (e) {
     e.preventDefault();
     if (cityList.css('display') === 'none') {
-      cityList.show();
+      cityList.slideDown();
       city.css('color', 'transparent');
     } else {
       cityList.hide();
@@ -56,6 +56,29 @@ $(function () {
   var today = new Date();
   var year = today.getFullYear();
   $('.year').text(year);
+  
+  //бронирование игры (заполняем название, время, стоимость)
+  $('#reservation').on('show.bs.modal', function (e) {
+    if ($(e.relatedTarget).hasClass('t-active')) {
+      e.preventDefault();
+    }
+    if ($('.room-title').text()) {
+      $('.room-name').text('"' + $('.room-title').text() + '"');
+    } else {
+      $('.room-name').text('"' + $(e.relatedTarget).parents('.schedule').children('h2').children('a').text() + '"');
+    }
+    $('.room-time').text('Время: ' + $(e.relatedTarget).children('.game-time').text());
+    $('.room-price').text('Стоимость: ' + $(e.relatedTarget).children('.game-price').text() + ' грн');
+    
+    $('#reservation').submit(function () {
+      $(e.relatedTarget).removeClass('t-info t-warning t-success t-danger').addClass('t-active');
+    });
+  });
+  
+  
+  
+  
+  
   
 });
 

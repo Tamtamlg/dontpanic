@@ -41,6 +41,50 @@
         <button class="btn btn-warning">Обратная связь</button>
       </div>
       
+      <div class="lang">
+        <ul class="lang-list">
+          <li>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="40" viewBox="0 0 640 480">
+                <g fill-rule="evenodd" stroke-width="1pt">
+                  <path fill="#fff" d="M0 0h640v480H0z"/>
+                  <path fill="#0039a6" d="M0 160.003h640V480H0z"/>
+                  <path fill="#d52b1e" d="M0 319.997h640V480H0z"/>
+                </g>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="40" viewBox="0 0 640 480">
+                <path fill="#ffce00" d="M0 320h640v160.002H0z"/>
+                <path d="M0 0h640v160H0z"/>
+                <path fill="#d00" d="M0 160h640v160H0z"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="20" width="40" viewBox="0 0 640 480">
+                <defs>
+                  <clipPath id="a">
+                    <path fill-opacity=".67" d="M-85.333 0h682.67v512h-682.67z"/>
+                  </clipPath>
+                </defs>
+                <g clip-path="url(#a)" transform="translate(80) scale(.94)">
+                  <g stroke-width="1pt">
+                    <path fill="#006" d="M-256 0H768.02v512.01H-256z"/>
+                    <path d="M-256 0v57.244l909.535 454.768H768.02V454.77L-141.515 0H-256zM768.02 0v57.243L-141.515 512.01H-256v-57.243L653.535 0H768.02z" fill="#fff"/>
+                    <path d="M170.675 0v512.01h170.67V0h-170.67zM-256 170.67v170.67H768.02V170.67H-256z" fill="#fff"/>
+                    <path d="M-256 204.804v102.402H768.02V204.804H-256zM204.81 0v512.01h102.4V0h-102.4zM-256 512.01L85.34 341.34h76.324l-341.34 170.67H-256zM-256 0L85.34 170.67H9.016L-256 38.164V0zm606.356 170.67L691.696 0h76.324L426.68 170.67h-76.324zM768.02 512.01L426.68 341.34h76.324L768.02 473.848v38.162z" fill="#c00"/>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
       <a href="#" class="bars"><i class="fa fa-bars" aria-hidden="true"></i></a>
       
       <ul class="city-list">
@@ -65,12 +109,11 @@
       <li><a href="#">Правила</a></li>
       <li><a href="#">Акции</a></li>
       <li><a href="#">Сотрудничество</a></li>
+      <li><a href="http://tamtamlg.github.io/dontpanic/schedule">Расписание</a></li>
     </ul>
     <div class="callback-menu text-center visible-sm-block visible-xs-block">
-        <p>+38 (098) 000-80-77</p>
-        <p>+38 (073) 044-50-77</p>
-        <button class="btn btn-warning">Обратная связь</button>
-      </div>
+      <button class="btn btn-warning">Обратная связь</button>
+    </div>
   </nav>
 <!--  MENU end -->
 
@@ -84,16 +127,16 @@
           <div class="flexslider">
             <ul class="slides">
               <li>
-                <h3>Новость 1</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum fuga, officia alias perspiciatis, exercitationem eos enim? Iste possimus voluptate officiis saepe ea ipsum facere autem earum praesentium, tempore at magni nemo rerum minima illo, hic quisquam! Exercitationem totam, dolore qui, in nesciunt ipsam atque quis deleniti, minima inventore eum odio!
+                <h3>Акция !</h3>
+                При бронировании игры у нас на сайте и онлайн-оплате, Вы получите скидку 5%.
               </li>
               <li>
-               <h3>Новость 2</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam aperiam ullam consequatur dicta, qui dolor quaerat inventore suscipit explicabo nihil?
+               <h3>Акция !</h3>
+                Если Вы решите посетить квест-комнату «Проект Генезис» в свой День Рождения, мы сделаем Вам скидку 10% (как в день вашего рождения, так и в течении 3-х дней после него).
               </li>
               <li>
-               <h3>Акция 1</h3>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maxime commodi eum modi id nihil facere, autem sequi, consectetur qui veritatis omnis veniam quam fugiat tenetur quaerat delectus quos corrupti ea at, suscipit eos aliquid?
+               <h3>Акция !</h3>
+                А когда Вы бронируете 3 и более сеансов игры «Проект Генезис» в один день, Вы  получаете скидку 20%.
               </li>
             </ul>
           </div>
@@ -105,15 +148,23 @@
 <!-- service btn-->
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12">
-        <a href="http://tamtamlg.github.io/dontpanic/schedule" class="btn btn-warning calendar">
+      <div class="col-xs-12 servise-btn">
+        <a href="http://tamtamlg.github.io/dontpanic/schedule" class="btn btn-link calendar">
           <i class="fa fa-calendar" aria-hidden="true"></i>&nbsp;Pacписание
         </a>
-        <select name="sort" id="sort" class="form-control sort">
-          <option>По рейтингу</option>
-          <option>По сложности</option>
-          <option>По количеству игроков</option>
-        </select>
+        
+        <div class="radio-wrapper"> 
+          <label class="radio-item">
+            <input type="radio" name="sort" id="number"> По количеству игроков
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="sort" id="rating"> По рейтингу
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="sort" id="complexity"> По сложности
+          </label>
+        </div>
+        
       </div>
     </div>
   </div>

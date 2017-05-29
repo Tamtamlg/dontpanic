@@ -100,6 +100,28 @@ header {
   right: 300px;
   color: #fff;
 }
+.lang {
+  position: absolute;
+  top: 120px;
+  right: 0px;
+  color: #fff;
+}
+.lang-list {
+  padding: 0;
+  list-style: none;
+  li {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    margin-right: 5px;
+    transform: skewX(40deg);
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
 /* HEADER end */
 
 /* MENU */
@@ -154,6 +176,9 @@ header {
   background: url('../img/bg.jpg') center top;
 }
 /* slider */
+.slider {
+  margin-bottom: 50px;
+}
 .slides {
   margin-top: 50px;
   color: #fff;
@@ -166,24 +191,34 @@ header {
 }
 /* slider end */
 
+
 .calendar {
-  width: 200px;
-}
-.sort {
-  width: 200px;
-  float: right;
-  background: #f0ad4e;
-  border-color: #f0ad4e;
   color: #fff;
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
-.sort:focus {
-  border-color: #f0ad4e;
-  outline: 0;
+.calendar:hover {
+  color: lightblue;
+  border: 1px solid lightblue;
+  text-decoration: none;
+}
+.radio-wrapper {
+  float: right;
+  padding: 10px;
+}
+.radio-item {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.radio-item:first-child {
+  margin-left: 0;
 }
 
 /* gallery */
 .gallery {
-  margin-top: 70px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 .gallery-item {
@@ -296,6 +331,9 @@ td,
 th{
   text-align: center;
 }
+td div {
+  border-radius: 10px;
+}
 td:hover {
   text-decoration: underline;
 }
@@ -326,10 +364,7 @@ th:hover {
   background-color: #d9534f;
   cursor: pointer;
 }
-.t-primary {
-  background-color: #337ab7;
-  cursor: pointer;
-}
+
 .results {
   margin-top: 50px;
   margin-bottom: 50px;
@@ -338,19 +373,88 @@ th:hover {
 .show-results {
   margin-top: 30px;
 }
-.game-info {
+.room {
   position: relative;
 }
-//.genesis {
-//  background: url('../img/genesis-img.jpg') center top no-repeat;
-//}
+.room-left-panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  h3 {
+    text-transform: uppercase;
+  }
+}
+.room-description {
+  width: 40%;
+}
+.team-results {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  text-decoration: underline;
+}
+.team-results:hover {
+  color: lightblue;
+}
+.average-time {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.room-right-panel {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.room-images {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 /* ROOM end*/
 
 
+/* SCHEDULE */
+.schedule {
+  h2 {
+    text-transform: uppercase;
+    a {
+      color: #fff;
+    }
+    a:hover {
+      color: lightblue;
+    }
+  }
+}
+/* SCHEDULE end */
+
+/* MODAL #reservation */
+.modal-content {
+  color: #333;
+  input {
+    max-width: 170px;
+    margin-bottom: 10px;
+  }
+  label {
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+}
+
+
+/* MODAL #reservation end */
 
 @media only screen and (max-width : 1200px) {
   .callback {
     right: 200px;
+  }
+}
+
+@media only screen and (max-width : 1100px) {
+  .room-description,
+  .room-right-panel {
+    font-size: 14px;
   }
 }
 
@@ -365,11 +469,57 @@ th:hover {
   }
 }
 
-
-@media only screen and (max-width : 768px) {
-
+@media only screen and (max-width : 960px) {
+  .room-description {
+    display: none;
+  }
 }
 
+
+@media only screen and (max-width : 800px) {
+  .radio-wrapper {
+    float: none;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width : 768px) {
+  .radio-item {
+    display: block;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .room-logo {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+@media only screen and (max-width : 570px) {
+  .average-time,
+  
+  .room-complexity {
+    display: none;
+  }
+  .team-results,
+  .room-right-panel {
+    display: block;
+    position: static;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .time-to-play,
+  .team {
+    font-size: 14px;
+  }
+  .room h3 {
+    font-size: 16px;
+  }
+  .room-logo {
+    max-width: 50px;
+    max-height: 50px;
+  }
+}
 
 @media only screen and (max-width : 480px) {
   .calendar {
@@ -377,11 +527,7 @@ th:hover {
     width: 100%;
     margin-bottom: 20px;
   }
-  .sort {
-    float: none;
-    display: block;
-    width: 100%;
-  }
+
 }
 
 
