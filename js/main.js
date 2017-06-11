@@ -50,6 +50,7 @@ $(function () {
   //выбор города
   cityListItem.click(function (e) {
     e.preventDefault();
+    e.stopImmediatePropagation();
     city.text($(this).text());
     cityList.hide();
     city.css('color', '#fff');
