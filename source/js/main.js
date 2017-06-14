@@ -10,14 +10,16 @@ $(function () {
   
   // меню
   var menu = $('.main-menu');
-  $('.bars').click(function (e) {
+  $('.cmn-toggle-switch').click(function (e) {
     e.preventDefault();
     if (menu.css('right') === '-300px') {
       menu.animate({right: 0}, 500);
       $('.open-menu').css('display', 'block');
+      $('.cmn-toggle-switch').addClass('active');
     } else {
       menu.animate({right: '-300px'}, 500);
       $('.open-menu').css('display', 'none');
+      $('.cmn-toggle-switch').removeClass('active');
     }
   });
   
@@ -26,11 +28,13 @@ $(function () {
     if (menu.css('right') === '0px' && !menu.is(e.target) && menu.has(e.target).length === 0) {
       menu.animate({right: '-300px'}, 500);
       $('.open-menu').css('display', 'none');
+      $('.cmn-toggle-switch').removeClass('active');
     }
   });
   
   //список городов
   var cityList = $('.city-list');
+  var cityListItem = $('.city-list li a');
   var location = $('.location');
   var city = $('.city');
   location.click(function (e) {
@@ -40,8 +44,17 @@ $(function () {
       city.css('color', 'transparent');
     } else {
       cityList.hide();
+      e.stopImmediatePropagation();
       city.css('color', '#fff');
     }
+  });
+  
+  //выбор города
+  cityListItem.click(function (e) {
+    e.preventDefault();
+    city.text($(this).text());
+    cityList.hide();
+    city.css('color', '#fff');
   });
   
   //скрываем список городов, если клик не на нем
@@ -75,10 +88,42 @@ $(function () {
     });
   });
   
+  // подключение слайдера расписания
+  $('.shedule-slider').flexslider({
+    animation: 'slide',
+    controlNav: false,
+    directionNav: true,
+    slideshow: false,
+    touch: false
+  });
   
+  //сортировка
+  var sortList = $('.sort-list');
+  var sortListItem = $('.sort-list li a');
+  var sortWrapper = $('.sort-wrapper');
+  sortWrapper.click(function (e) {
+    e.preventDefault();
+    if (sortList.css('display') === 'none') {
+      sortList.slideDown();
+    } else {
+      sortList.hide();
+    }
+  });
   
+  //выбор сортировки
+  sortListItem.click(function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    $('.sort-text').text($(this).text());
+    sortList.hide();
+  });
   
-  
+  //скрываем сортировку, если клик не на ней
+  $(document).mouseup(function (e) {
+    if (!sortWrapper.is(e.target) && sortWrapper.has(e.target).length === 0) {
+      sortList.hide();
+    }
+  });
   
 });
 
