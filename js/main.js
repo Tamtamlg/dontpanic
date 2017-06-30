@@ -124,8 +124,7 @@ $(function () {
       sortList.hide();
     }
   });
-  
-//  console.log('test');
+
   
 });
 
