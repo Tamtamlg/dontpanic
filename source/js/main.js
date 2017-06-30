@@ -124,6 +124,8 @@ $(function () {
       sortList.hide();
     }
   });
-  
+
+  //полифил для IE для свойства object-fill
+  objectFitImages('.zoom', {watchMQ: true});
 });
 
