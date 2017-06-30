@@ -125,6 +125,7 @@ $(function () {
     }
   });
 
-  console.log('ok');
+  //полифил для IE для свойства object-fill
+  objectFitImages('.zoom', {watchMQ: true});
 });
 
