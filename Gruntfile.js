@@ -225,7 +225,7 @@ module.exports = function(grunt) {
       // следить за файлами разметки
       html: {
         // за сохранением каких файлов следить
-        files: ['source/*.html'],
+        files: ['source/**/*.html'],
         // какую задачу при этом запускать
         tasks: ['html'],
         options: {
@@ -286,7 +286,7 @@ module.exports = function(grunt) {
     'uglify',
     'imagemin',
     'replace',
-    'gh-pages',
+//    'gh-pages',
     'browserSync',
 	'watch'
     
@@ -309,6 +309,7 @@ module.exports = function(grunt) {
   // только обработка html
   grunt.registerTask('html', [
     'copy:html',
+    'copy:includes',
     'includereplace:html'
   ]);
 

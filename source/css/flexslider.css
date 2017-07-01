@@ -199,16 +199,16 @@ html[xmlns] .flexslider .slides {
   width: 18px;
   height: 18px;
   display: block;
-  background: #fff; // переключатели
+  background: #fff; /* переключатели */
   cursor: pointer;
   text-indent: -9999px;
   border-radius: 50%;
 }
 .flex-control-paging li a:hover {
-  background: #000; // переключатели
+  background: #000; /* переключатели */
 }
 .flex-control-paging li a.flex-active {
-  background: #000; // переключатели
+  background: #000; /* переключатели */
   cursor: default;
 }
 .flex-control-thumbs {

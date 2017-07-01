@@ -127,5 +127,9 @@ $(function () {
 
   //полифил для IE для свойства object-fill
   objectFitImages('.zoom', {watchMQ: true});
+  
+  //fancybox
+  $('.fancy').fancybox();
+
 });
 
