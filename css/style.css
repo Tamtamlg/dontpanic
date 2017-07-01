@@ -1,22 +1,44 @@
 .d-flex-r {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 }
 
 .d-flex-gallery {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
 	justify-content: center;
 	margin: auto;
 }
 
 body {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	min-height: 100vh;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
 	flex-direction: column;
 	position: relative;
 	margin: 0;
@@ -60,7 +82,6 @@ body {
 	text-indent: -9999px;
 	font-size: 0;
 	cursor: pointer;
-	-webkit-transition: background 0.3s;
 	transition: background 0.3s;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -105,25 +126,22 @@ body {
 }
 
 .cmn-toggle-switch__htx span {
-	-webkit-transition: background 0 0.3s;
 	transition: background 0 0.3s;
 }
 
 .cmn-toggle-switch__htx span::before,
 .cmn-toggle-switch__htx span::after {
-	-webkit-transition-delay: 0.3s, 0;
 	transition-delay: 0.3s, 0;
-	-webkit-transition-duration: 0.3s, 0.3s;
 	transition-duration: 0.3s, 0.3s;
 }
 
 .cmn-toggle-switch__htx span::before {
-	-webkit-transition-property: top, -webkit-transform;
+	transition-property: top, -webkit-transform;
 	transition-property: top, transform;
 }
 
 .cmn-toggle-switch__htx span::after {
-	-webkit-transition-property: bottom, -webkit-transform;
+	transition-property: bottom, -webkit-transform;
 	transition-property: bottom, transform;
 }
 
@@ -153,7 +171,6 @@ body {
 
 .cmn-toggle-switch__htx.active span::before,
 .cmn-toggle-switch__htx.active span::after {
-	-webkit-transition-delay: 0, 0.3s;
 	transition-delay: 0, 0.3s;
 }
 
@@ -319,6 +336,8 @@ header {
 /* CONTENT */
 
 .content {
+	-webkit-flex: 1;
+	-ms-flex: 1;
 	flex: 1;
 	width: 100%;
 	background: url("../img/bg.jpg") center top;
@@ -462,6 +481,8 @@ header {
 }
 
 .gallery-item:hover .zoom {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
 	transform: scale(1.1);
 }
 
@@ -474,6 +495,8 @@ header {
 	top: 50%;
 	left: 50%;
 	height: 25%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
 
@@ -685,7 +708,6 @@ th:hover {
 	font-weight: bold;
 	opacity: 1;
 	cursor: pointer;
-	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -807,7 +829,11 @@ th:hover {
 }
 
 .gamers-wrap {
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
 	align-items: center;
 	margin-bottom: 10px;
 }
@@ -916,8 +942,6 @@ th:hover {
 }
 
 /* PHOTO_GALLERY end */
-
-/*# sourceMappingURL=style.css.map */
 
 @media only screen and (max-width: 1200px) {
 
