@@ -81,7 +81,7 @@ $(function () {
       $('.room-name').text('"' + $(e.relatedTarget).parents('.schedule').children('h2').children('a').text() + '"');
     }
     $('.room-time').text('Время: ' + $(e.relatedTarget).children('.game-time').text());
-    $('.room-price').text('Стоимость: ' + $(e.relatedTarget).children('.game-price').text() + ' грн');
+//    $('.room-price').text('Стоимость: ' + $(e.relatedTarget).children('.game-price').text() + ' грн');
     
     $('#reservation').submit(function () {
       $(e.relatedTarget).removeClass('t-info t-warning t-success t-danger').addClass('t-active');
