@@ -602,13 +602,16 @@ th:hover {
   border-radius: 0; }
   .modal-content input {
     margin-bottom: 10px;
-    max-width: 170px;
     border: none;
     border-bottom: 1px solid #333;
-    outline: none; }
+    outline: none;
+    width: 100%; }
   .modal-content label {
     margin-bottom: 0;
     font-weight: normal; }
+  .modal-content input[type="radio"] {
+    width: auto;
+    margin-right: 15px; }
 
 .modal-header {
   background: #f0ad4e;
@@ -617,6 +620,13 @@ th:hover {
 .close {
   color: #fff;
   opacity: 1; }
+
+.gamers-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; }
+  .gamers-wrap label div {
+    line-height: 20px; }
 
 /* MODAL #reservation end */
 /* PHOTO_GALLERY start */

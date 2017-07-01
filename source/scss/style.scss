@@ -690,14 +690,18 @@ th:hover {
   border-radius: 0;
   input {
     margin-bottom: 10px;
-    max-width: 170px;
     border: none;
     border-bottom: 1px solid #333;
     outline: none;
+    width: 100%;
   }
   label {
     margin-bottom: 0;
     font-weight: normal;
+  }
+  input[type="radio"] {
+    width: auto;
+    margin-right: 15px;
   }
 }
 .modal-header {
@@ -708,6 +712,17 @@ th:hover {
   color: #fff;
   opacity: 1;
 }
+.gamers-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  label {
+    div {
+      line-height: 20px;
+    }
+  }
+}
+
 /* MODAL #reservation end */
 
 /* PHOTO_GALLERY start */
