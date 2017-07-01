@@ -181,7 +181,7 @@ header {
 
   a:hover,
   a:focus {
-    color: lightblue;
+    color: #ec971f;
     text-decoration: none;
   }
   li {
@@ -269,7 +269,7 @@ header {
   background: rgba(0, 0, 0, 0.9);
 
   a:hover {
-    color: lightblue;
+    color: #ec971f;
     text-decoration: none;
   }
   ul {
@@ -322,8 +322,8 @@ header {
   font-size: 18px;
 }
 .calendar:hover {
-  border: 1px solid lightblue;
-  color: lightblue;
+  border: 1px solid #ec971f;
+  color: #ec971f;
   text-decoration: none;
 }
 
@@ -336,8 +336,8 @@ header {
   border-radius: 5px;
 }
 .sort-wrapper:hover {
-  border: 1px solid lightblue;
-  color: lightblue;
+  border: 1px solid #ec971f;
+  color: #ec971f;
   cursor: pointer;
 }
 .sort-wrapper .caret {
@@ -362,7 +362,7 @@ header {
 
   a:hover,
   a:focus {
-    color: lightblue;
+    color: #ec971f;
     text-decoration: none;
   }
   li {
@@ -462,7 +462,7 @@ footer {
   background: url('../img/footer-bg.jpg') center top;
 
   a:hover {
-    color: lightblue;
+    color: #ec971f;
     text-decoration: none;
   }
   p {
@@ -478,7 +478,7 @@ footer {
   list-style: none;
 
   a:hover {
-    border-color: lightblue;
+    border-color: #ec971f;
   }
   li {
     display: inline-block;
@@ -573,7 +573,7 @@ th:hover {
   text-decoration: underline;
 }
 .team-results:hover {
-  color: lightblue;
+  color: #ec971f;
 }
 .average-time {
   position: absolute;
@@ -641,6 +641,31 @@ th:hover {
 .shedule-slider .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;
 }
+
+.review {
+  text-align: left;
+  .avatar {
+    width: 50px;
+    opacity: .9;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+}
+.review-name {
+  color: #f0ad4e;
+  font-size: 22px;
+  &:hover {
+    color: #ec971f;
+  }
+}
+
+.review-date {
+  float: right;
+  font-size: 14px;
+  line-height: 24px;
+}
 /* ROOM end*/
 
 
@@ -650,7 +675,7 @@ th:hover {
     text-transform: uppercase;
 
     a:hover {
-      color: lightblue;
+      color: #ec971f;
     }
     a {
       color: #fff;
@@ -662,14 +687,26 @@ th:hover {
 /* MODAL #reservation */
 .modal-content {
   color: #333;
+  border-radius: 0;
   input {
     margin-bottom: 10px;
     max-width: 170px;
+    border: none;
+    border-bottom: 1px solid #333;
+    outline: none;
   }
   label {
     margin-bottom: 0;
     font-weight: normal;
   }
+}
+.modal-header {
+  background: #f0ad4e;
+  color: #fff;
+}
+.close {
+  color: #fff;
+  opacity: 1;
 }
 /* MODAL #reservation end */
 
@@ -701,6 +738,58 @@ th:hover {
   list-style: none;
   color: #fff;
   font-weight: bold;
+}
+.star-block {
+  display: inline-block;
+  font-style: italic;
+  font-size: 14px;
+  margin-right: 20px;
+  line-height: 25px;
+}
+.star-block:last-child {
+  float: right;
+  margin-right: 0;
+}
+.star,
+.time {
+  margin-left: 3px;
+  margin-right: 1px;
+}
+.review:not(:last-of-type) {
+  border-bottom: 1px solid #fff;
+  padding: 10px 0 20px 0;
+}
+.review-modal .modal-content {
+  text-align: left;
+  input {
+    max-width: 100%;
+    width: 185px;
+    margin-bottom: 20px;
+  }
+  .review-input-wrap {
+    display: inline-block;
+  }
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    resize: none;
+    outline: none;
+    margin-bottom: 20px;
+  }
+}
+.rating-title {
+  font-size: 14px;
+  font-style: italic;
+}
+.atmosphere-rating,
+.plot-rating,
+.service-rating {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #ec971f;
+  top: -3px;
+  position: relative;
 }
 
 /* PHOTO_GALLERY end */
