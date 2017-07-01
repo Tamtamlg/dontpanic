@@ -128,8 +128,51 @@ $(function () {
   //полифил для IE для свойства object-fill
   objectFitImages('.zoom', {watchMQ: true});
   
-  //fancybox
+  //галерея
   $('.fancy').fancybox();
 
+  //звезды рейтинга
+  $(".atmosphere").starRating({
+    totalStars: 10,
+    starSize: 16,
+    useFullStars: true,
+    useGradient: false,
+    activeColor: 'orange',
+    disableAfterRate: false,
+    onHover: function(currentIndex, currentRating, $el){
+      $('.atmosphere-rating').text(currentIndex);
+    },
+    onLeave: function(currentIndex, currentRating, $el){
+      $('.atmosphere-rating').text(currentRating);
+    }
+  });
+  $(".plot").starRating({
+    totalStars: 10,
+    starSize: 16,
+    useFullStars: true,
+    useGradient: false,
+    activeColor: 'orange',
+    disableAfterRate: false,
+    onHover: function(currentIndex, currentRating, $el){
+      $('.plot-rating').text(currentIndex);
+    },
+    onLeave: function(currentIndex, currentRating, $el){
+      $('.plot-rating').text(currentRating);
+    }
+  });
+  $(".service").starRating({
+    totalStars: 10,
+    starSize: 16,
+    useFullStars: true,
+    useGradient: false,
+    activeColor: 'orange',
+    disableAfterRate: false,
+    onHover: function(currentIndex, currentRating, $el){
+      $('.service-rating').text(currentIndex);
+    },
+    onLeave: function(currentIndex, currentRating, $el){
+      $('.service-rating').text(currentRating);
+    }
+  });
 });
 
