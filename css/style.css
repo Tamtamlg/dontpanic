@@ -526,6 +526,10 @@ header {
 	height: 100%;
 }
 
+.hover-text p {
+	color: #fff;
+}
+
 .hover-text .game-img {
 	margin-top: 10px;
 	margin-left: 10px;
@@ -542,6 +546,7 @@ header {
 	right: 10px;
 	padding-top: 45px;
 	font-size: 14px;
+	color: #fff;
 }
 
 .hover-text .game-time .game-time-img {
@@ -560,6 +565,7 @@ header {
 	right: 10px;
 	padding-bottom: 30px;
 	font-size: 14px;
+	color: #fff;
 }
 
 .hover-text .game-man .game-man-img {
@@ -588,6 +594,7 @@ header {
 	left: 10px;
 	padding-bottom: 30px;
 	font-size: 14px;
+	color: #fff;
 }
 
 .hover-text .game-complexity .game-complexity-img {
@@ -817,12 +824,19 @@ th:hover {
 }
 
 .shedule-slider .flex-direction-nav .flex-prev {
-	left: 40%;
+	left: 10%;
+	top: -36px;
 }
 
 .shedule-slider .flex-direction-nav .flex-next {
-	right: 40%;
+	right: 10%;
+	top: -36px;
 	text-align: right;
+}
+
+.shedule-slider .flex-direction-nav .flex-prev:focus,
+.shedule-slider .flex-direction-nav .flex-next:focus {
+	outline: none;
 }
 
 .shedule-slider .flexslider:hover .flex-direction-nav .flex-prev {
@@ -1132,6 +1146,14 @@ footer .copy p {
 .room-logo {
 	max-width: 50px;
 	max-height: 50px;
+}
+
+.shedule-slider .flex-direction-nav .flex-prev {
+	top: 0;
+}
+
+.shedule-slider .flex-direction-nav .flex-next {
+	top: 0px;
 }
 
 }

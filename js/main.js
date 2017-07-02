@@ -94,6 +94,7 @@ $(function () {
     controlNav: false,
     directionNav: true,
     slideshow: false,
+    animationLoop: false,
     touch: false
   });
   
