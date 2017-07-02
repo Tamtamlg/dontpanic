@@ -642,6 +642,7 @@ th:hover {
 }
 .t-active {
   background-color: #ababab;
+  padding: 4px;
 }
 .t-active:hover,
 .t-time:hover {
@@ -651,18 +652,22 @@ th:hover {
 .t-success {
   background-color: #5cb85c;
   cursor: pointer;
+  padding: 4px;
 }
 .t-info {
   background-color: #5bc0de;
   cursor: pointer;
+  padding: 4px;
 }
 .t-warning {
   background-color: #f0ad4e;
   cursor: pointer;
+  padding: 4px;
 }
 .t-danger {
   background-color: #d9534f;
   cursor: pointer;
+  padding: 4px;
 }
 
 .results {
@@ -938,6 +943,23 @@ th:hover {
 }
 
 /* PHOTO_GALLERY end */
+
+.content-info {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  ol {
+    list-style-position: inside;
+    padding-left: 0;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}
 
 @media only screen and (max-width : 1200px) {
   .callback {
