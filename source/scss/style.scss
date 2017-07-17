@@ -312,6 +312,13 @@ header {
     text-align: center;
   }
 }
+.main-slider {
+  img {
+    height: 40vw;
+    object-fit: cover;
+    font-family: 'object-fit: cover;'
+  }
+}
 /* slider end */
 
 
@@ -799,8 +806,38 @@ th:hover {
   font-size: 14px;
   line-height: 24px;
 }
-
-
+/* form-reservation */
+.form-reservation {
+  margin-bottom: 70px;
+  h2 {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+  input {
+    background: transparent;
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+  ::-webkit-input-placeholder {color:#ddd;}
+  ::-moz-placeholder          {color:#ddd;}
+  :-moz-placeholder           {color:#ddd;}
+  :-ms-input-placeholder      {color:#ddd;}
+  .btn-wrap {
+    margin-top: 50px;
+  }
+}
+.gamers-wrap {
+  label {
+    margin-left: 10px;
+  }
+}
+.form-reservation-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* form-reservation end */
 /* ROOM end*/
 
 

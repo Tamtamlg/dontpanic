@@ -271,6 +271,11 @@ header {
   .slides h3 {
     text-align: center; }
 
+.main-slider img {
+  height: 40vw;
+  object-fit: cover;
+  font-family: "object-fit: cover;"; }
+
 /* slider end */
 .calendar {
   border: 1px solid #fff;
@@ -690,6 +695,37 @@ th:hover {
   font-size: 14px;
   line-height: 24px; }
 
+/* form-reservation */
+.form-reservation {
+  margin-bottom: 70px; }
+  .form-reservation h2 {
+    margin-bottom: 50px;
+    text-transform: uppercase; }
+  .form-reservation input {
+    background: transparent;
+    color: #fff;
+    padding: 5px 10px;
+    margin-bottom: 10px; }
+  .form-reservation ::-webkit-input-placeholder {
+    color: #ddd; }
+  .form-reservation ::-moz-placeholder {
+    color: #ddd; }
+  .form-reservation :-moz-placeholder {
+    color: #ddd; }
+  .form-reservation :-ms-input-placeholder {
+    color: #ddd; }
+  .form-reservation .btn-wrap {
+    margin-top: 50px; }
+
+.gamers-wrap label {
+  margin-left: 10px; }
+
+.form-reservation-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+/* form-reservation end */
 /* ROOM end*/
 /* SCHEDULE */
 .schedule h2 {

@@ -120,6 +120,20 @@ module.exports = function(grunt) {
         }
       }
     },
+    
+    // сортируем css
+    csscomb: {
+      dist: {
+        options: {
+          // путь к конфигурационному файлу
+          config: 'csscomb.json'
+        },
+        files: {
+          // в какой файл, из какого файла (тут это один и тот же файл)
+          'build/css/style.css': ['build/css/style.css']
+        }
+      }
+    },
 
     // Сжимаем css
     cssmin: {
@@ -282,6 +296,7 @@ module.exports = function(grunt) {
     'includereplace:html',
     'autoprefixer',
     'cmq',
+    'csscomb',
     'cssmin',
     'uglify',
     'imagemin',
@@ -297,6 +312,7 @@ module.exports = function(grunt) {
     'sass',
     'copy:css',
     'cmq',
+    'csscomb',
     'cssmin'
   ]);
   

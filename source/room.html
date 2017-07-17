@@ -282,6 +282,69 @@
       </div>
     </section>
     
+    <section class="form-reservation">
+     
+      <h2 class="text-center">Оформление брони</h2>
+       
+      <form action="/">
+        
+            <div class="container">
+              <div class="row form-reservation-row">
+                <div class="">
+                  <p class="room-time"></p>
+                  <p class="room-price"></p>
+                  <div class="gamers-wrap">
+                    <input type="radio" name="gamers" id="gamers2">
+                    <label for="gamers2">
+                      <div>Игроков: 2</div>
+                      <div>Цена: 600 грн</div>
+                    </label>
+                  </div>
+
+                  <div class="gamers-wrap">
+                    <input type="radio" name="gamers" id="gamers3">
+                    <label for="gamers3">
+                      <div>Игроков: 3</div>
+                      <div>Цена: 650 грн</div>
+                    </label>
+                  </div>
+
+                  <div class="gamers-wrap">
+                    <input type="radio" name="gamers" id="gamers4">
+                    <label for="gamers4">
+                      <div>Игроков: 4</div>
+                      <div>Цена: 700 грн</div>
+                    </label>
+                  </div>
+
+                </div>
+                <div class="">
+                  <div>
+                    <input type="text" name="userSurname" id="userSurname" required placeholder="Фамилия*">
+                  </div>
+                  <div>
+                    <input type="text" name="userName" id="userName" required placeholder="Имя*">
+                  </div>
+                  <div>
+                    <input type="email" name="userEmail" id="userEmail" required placeholder="Email*">
+                  </div>
+                  <div>
+                    <input type="tel" name="userPhone" id="userPhone" required placeholder="Телефон*">
+                  </div>
+                  <div>
+                    <input type="text" name="userPromo" id="userPromo" placeholder="Промо-код">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="text-center btn-wrap">
+              <button type="submit" class="btn btn-warning">Забронировать</button>
+            </div>
+
+      </form>
+    </section>
+    
     <div class="container-fluid">
       <div class="row">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.440162420419!2d30.540987315730792!3d50.432901479473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf09050dd235%3A0x3983da5d3cb516e!2z0LLRg9C70LjRhtGPINCf0LDQvdCw0YHQsCDQnNC40YDQvdC-0LPQviwgMywg0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1491417924265" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -462,19 +525,19 @@
               
               <div class="rating-title">Атмосферность
                 <div>
-                  <span class="atmosphere"></span><span class="atmosphere-rating"></span>
+                  <span class="atmosphere"></span><span class="atmosphere-rating">0.0</span>
                 </div>
               </div>
               
               <div class="rating-title">Сюжет
                 <div>
-                  <span class="plot"></span><span class="plot-rating"></span>
+                  <span class="plot"></span><span class="plot-rating">0.0</span>
                 </div>
               </div>
               
               <div class="rating-title">Обслуживание
                 <div>
-                  <span class="service"></span><span class="service-rating"></span>
+                  <span class="service"></span><span class="service-rating">0.0</span>
                 </div>
               </div>
               
@@ -497,6 +560,7 @@
 <!--  CONTENT end -->
 
 <!-- MODAL #reservation-->
+<!--
 <form action="/" class="modal fade" id="reservation" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -508,7 +572,7 @@
         <div class="row">
           <div class="col-md-5">
             <p class="room-time"></p>
-<!--            <p class="room-price"></p>-->
+            <p class="room-price"></p>
             <div class="gamers-wrap">
               <input type="radio" name="gamers" id="gamers2">
               <label for="gamers2">
@@ -560,6 +624,7 @@
     </div>
   </div>
 </form>
+-->
 <!-- MODAL #reservation end -->
 
 <!--  FOOTER -->
